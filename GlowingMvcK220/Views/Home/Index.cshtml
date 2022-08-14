@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model HomeVM
+
+<ul>
+    @foreach (var cat in Model.Categories)
+    {
+       <li>@cat.CategoryName</li>
+    }
+    
+</ul>
+
+<section class="favorite-product">
+    <h3 class="text-center">Favorite Products</h3>
+<div class="row">
+    @foreach (var favorie in Model.FavoriteProducts)
+    {
+        <div class="col-lg-4">
+            <div class="product-item">
+                <img src="@favorie.PhotoUrl" class="img-fluid"/>
+                <h2>@favorie.Name</h2>
+                <p>@favorie.Price</p>
+            </div>
+        </div>
+    }
+</div>
+</section>
+
+<section class="featured-product">  
+    <h3 class="text-center">Featured Products</h3>
+    <div class="row">
+        @foreach (var favorie in Model.FeaturedProducts)
+        {
+            <div class="col-lg-4">
+                <div class="product-item">
+                    <img src="@favorie.PhotoUrl" class="img-fluid" />
+                    <h2>@favorie.Name</h2>
+                    <p>@favorie.Price</p>
+                </div>
+            </div>
+        }
+    </div>
+</section>
