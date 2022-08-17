@@ -17,7 +17,28 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.8" />
     <PackageReference Include="System.Diagnostics.Tools" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\CODEOWNERS" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\CONTRIBUTING.md" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\dependabot.yml" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\ISSUE_TEMPLATE\bug_report.yml" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\ISSUE_TEMPLATE\config.yml" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\ISSUE_TEMPLATE\feature_request.yml" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\release-drafter.yml" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\SUPPORT.md" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\workflows\browserstack.yml" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\workflows\bundlewatch.yml" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\workflows\codeql.yml" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\workflows\css.yml" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\workflows\docs.yml" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\workflows\js.yml" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\workflows\lint.yml" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\workflows\node-sass.yml" />
+    <None Include="wwwroot\adminFront\assets\scss\bootstrap\.github\workflows\release-notes.yml" />
   </ItemGroup>
 
 </Project>

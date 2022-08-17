@@ -15,7 +15,6 @@ namespace GlowingMvcK220.Controllers
             _logger = logger;
             _db = db;
         }
-
         public IActionResult Index()
         {
             HomeVM vm = new()
@@ -40,3 +39,4 @@ namespace GlowingMvcK220.Controllers
         }
     }
 }
+//Crud

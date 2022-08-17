@@ -1,0 +1,57 @@
+﻿@model Product
+
+<div class="col-lg-6">
+<form method="post">
+    <div class="mb-2">
+        <label asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" placeholder="name..."/>
+    </div>
+    <div class="mb-2">
+        <label>Categories</label>
+        <select class="form-control" asp-for="CategoryId">
+            @foreach (Category cat in ViewBag.CategoryList)
+            {
+                <option value="@cat.Id">@cat.CategoryName</option>
+            }
+        </select>
+    </div>
+        <div class="mb-2">
+            <label asp-for="Description"></label>
+            <textarea class="form-control" asp-for="Description" placeholder="name..."></textarea>
+        </div>
+        <div class="mb-2">
+            <label asp-for="Price"></label>
+            <input class="form-control" asp-for="Price" placeholder="0.00" />
+        </div>
+        <div class="mb-2">
+            <label asp-for="Discount"></label>
+            <input class="form-control" asp-for="Discount" placeholder="0.00" />
+        </div>
+		<div class="form-checkbox-box">
+			<div class="form-check form-check-inline">
+				<input type="checkbox" asp-for="IsNew">
+				<label asp-for="IsNew"></label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input type="checkbox" asp-for="IsFeatured">
+				<label asp-for="IsFeatured"></label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input type="checkbox" asp-for="IsFavorite">
+				<label asp-for="IsFavorite"></label>
+			</div>
+		</div>
+        <div class="mb-2">
+            <label asp-for="Rating"></label>
+            <input class="form-control" asp-for="Rating" placeholder="0" />
+        </div>
+        <div class="mb-2">
+            <label asp-for="PhotoUrl"></label>
+            <input type="file" class="form-control" name="NewPhoto" />
+        </div>
+        <div class="mb-2">
+            <input type="submit" class="btn btn-success" value="Add Product"/>
+        </div>
+
+</form>
+</div>

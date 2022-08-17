@@ -1,0 +1,50 @@
+﻿@model List<Category>
+
+
+<a class="btn btn-success" asp-controller="Category" asp-action="Create">Create</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Photo</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cat in Model)
+        {
+            <tr>
+                <td>@cat.Id</td>
+                <td>@cat.CategoryName</td>
+                <td>
+                    <img width="100" src="@cat.PhotoUrl"/>
+                </td>
+                <td class="d-flex gap-3">
+                    <a asp-controller="Category"
+                       asp-action="Edit"
+                       asp-route-id="@cat.Id"
+                       >Edit</a> |
+
+                    <form asp-action="Delete" method="post">
+                        <input name="id" type="hidden" value="@cat.Id"/>
+                        <button class="btnDelete" type="button">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@section Scripts{
+<script>
+    const btnDelete = document.querySelectorAll(".btnDelete");
+    for(let btn of btnDelete){
+        btn.onclick = function () {
+            let res=confirm("Are sure delete this category?")
+            if(res){
+                this.parentNode.submit()
+            }
+        }
+    }
+</script>
+}

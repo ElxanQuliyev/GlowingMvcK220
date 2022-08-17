@@ -1,0 +1,12 @@
+﻿@model Category
+<form method="post">
+    <div>
+        <label class="form-label">Category Name</label>
+        <input value="@Model.CategoryName" name="categoryName" class="form-control" placeholder="name..." />
+    </div>
+    <div class="my-2">
+        <input type="submit" class="btn btn-warning" value="Edit Category" />
+    </div>
+</form>
+
+<a asp-action="Index">Go to Back</a>
